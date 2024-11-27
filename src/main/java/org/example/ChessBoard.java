@@ -121,11 +121,25 @@ public class ChessBoard {
     //
 
     public void printBoard() {  //print board in console
+
+        String[] Letters = new String[]{"a", "b", "c", "d", "e", "f", "g", "h"};
+        /*for(int i =1; i<9; i++){
+            Letters[i-1] = String.valueOf(i);
+        }*/
+
+
         System.out.println("Turn " + nowPlayer);
         System.out.println();
         System.out.println("Player 2(Black)");
         System.out.println();
-        System.out.println("\t0\t1\t2\t3\t4\t5\t6\t7");
+        // System.out.println("\t0\t1\t2\t3\t4\t5\t6\t7");
+        StringBuilder line = new StringBuilder();
+        line.append("\t");
+        for (int i = 0; i < Letters.length; i++) {
+            // System.out.println(Letters[i] + "\t");
+            line.append(Letters[i]).append("\t");
+        }
+        System.out.println(line);
 
         for (int i = 7; i > -1; i--) {
             System.out.print(i + "\t");
@@ -136,9 +150,14 @@ public class ChessBoard {
                     System.out.print(board[i][j].getSymbol() + board[i][j].getColor().substring(0, 1).toLowerCase() + "\t");
                 }
             }
-            System.out.println();
+            System.out.println(i);
+            // System.out.println();
             System.out.println();
         }
+        // System.out.println("\t0\t1\t2\t3\t4\t5\t6\t7");
+        //System.out.println(Arrays.toString(Letters));
+        System.out.println(line);
+
         System.out.println("Player 1(White)");
     }
 

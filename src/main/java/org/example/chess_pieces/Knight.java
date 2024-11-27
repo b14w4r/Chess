@@ -40,7 +40,7 @@ public class Knight extends ChessPiece {
 
     @Override
     public String getSymbol() {
-        return "H";
+        return "N";
     }
 }
 

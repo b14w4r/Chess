@@ -23,7 +23,6 @@ public class Pawn extends ChessPiece {
             return false;
         }
 
-        // Проверяем может ли ходить пешка буквой "Г"
         if (getColor().equals("White")) {
             if (toLine > line) { // Белая пешка ходит вверх
                 // Проверяем, первый ли ход (на 2 клетки)
