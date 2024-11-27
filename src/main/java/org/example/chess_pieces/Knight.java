@@ -2,8 +2,8 @@ package org.example.chess_pieces;
 
 import org.example.ChessBoard;
 
-public class Horse extends ChessPiece {
-    public Horse(String color) {
+public class Knight extends ChessPiece {
+    public Knight(String color) {
         super(color);
     }
 
